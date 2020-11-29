@@ -17,9 +17,7 @@ var score;
 
 function preload()
 {
-  bg=color("black");
-  txtcolor=color("black");
-  fetchtime();
+  
 }
 //Setup function
 function setup() {
@@ -94,8 +92,7 @@ function setup() {
 function draw() {
   Engine.update(engine);
   //To assign brown background color
-  
-  
+  background(255);
   block1.score();
   block2.score();
   block3.score();
@@ -126,7 +123,7 @@ function draw() {
   //Displaying ground
   ground1.display();
 
-  //Displaying first level
+  fill("blue");
   block1.display();
   block2.display();
   block3.display();
@@ -135,25 +132,25 @@ function draw() {
   block6.display();
   block7.display();
 
-  //Displaying second level
+  fill("green");
   block8.display();
   block9.display();
   block10.display();
   block11.display();
   block12.display();
 
-  //Displaying third level
+  fill("pink");
   block13.display();
   block14.display();
   block15.display();
 
-  //Displaying fourth level
+  fill("yellow");
   block16.display();
   
   //displaying second ground
   ground2.display();
 
-  //Displaying bottom level
+  
   block17.display();
   block18.display();
   block19.display();
@@ -182,16 +179,15 @@ function draw() {
 
   //Addiding instructions
   strokeWeight(0);
-  fill(txtcolor);
   textSize(22);
   text("Drag the Hexagonal Stone and Release it, to launch it towards the blocks",150,30);
 
   
   textSize(24);
-  fill(txtcolor)
+  fill("black");
   text("Score : "+score,30,360);
  // console.log(score);
- background(255);
+
 }
 //Mouse drag function to adjust the aim of hexagon
 function mouseDragged()

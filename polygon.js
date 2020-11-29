@@ -13,13 +13,13 @@ class polygon
         this.body=Bodies.circle(x,y,r,options);
         World.add(world,this.body);
         this.r=r;
-        this.image=loadImage("polygon.png")
+        
     }
 
     display()
     {
-        imageMode(CENTER);
-        image(this.image,this.body.position.x,this.body.position.y,40,40);
+        ellipseMode(RADIUS);
+        ellipse(this.body.position.x,this.body.position.y,40,40);
         
     }
 

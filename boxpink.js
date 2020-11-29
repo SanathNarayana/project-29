@@ -3,7 +3,7 @@ class boxpink extends BaseClass
   constructor(x,y,width,height)
   {
     super(x,y,width,height);
-    this.image=loadImage("block2.png")
+   
     this.Visibility=255;
   }
 
@@ -14,15 +14,16 @@ class boxpink extends BaseClass
       World.remove(world,this.body);
       push();
       this.Visibility=this.Visibility-5;
-      tint(255,this.Visibility);
+      /*tint(255,this.Visibility);
       var pos=this.body.position;
-      image(this.image,pos.x,pos.y,this.width,this.height)
+      rectMode(CENTER);
+      rect(pos.x,pos.y,this.width,this.height)*/
       pop();
     }
     else
     {
-      imageMode(CENTER)
-      image(this.image,this.body.position.x,this.body.position.y,this.width,this.height)
+      rectMode(CENTER);
+      rect(this.body.position.x,this.body.position.y,this.width,this.height)
       super.display();
     }
   }
